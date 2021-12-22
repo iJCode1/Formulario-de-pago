@@ -57,6 +57,7 @@
 .form-input.is-disabled{
   background: var(--grey2);
   box-shadow: none;
+  cursor: not-allowed;
 }
 .form-input::placeholder{
   color: var(--grey);
@@ -89,7 +90,8 @@
   margin-block-end: .5rem;
 }
 .form-cta.is-disabled{
-  opacity: 0.2;
+  opacity: 0.3;
+  cursor: not-allowed;
 }
 .form-verify{
   font: var(--text2regular);

@@ -10,9 +10,6 @@
   <meta property="og:url" content="https://ijcode1.github.io/Formulario-de-pago/"/>
   <meta property="og:image" content="https://raw.githubusercontent.com/iJCode1/Formulario-de-pago/main/assets/images/formulario-pago_webPage.png"/>
   <meta property="og:description" content="Formulario de pago es un proyecto para simular una card de pago en cualquier plataforma" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="./assets/icons/logo.png" type="image/x-icon">
   <link rel="stylesheet" href="./css/index.css">
   <title>iJCode - Formulario de Pago</title>
@@ -28,33 +25,34 @@
       </div>
       <form class="form">
         <label class="form-label" for="name">Full Name</label>
-        <input class="form-input" id="name" type="text" placeholder="Alex Montoya" aria-label="Input de nombre completo">
-        <label class="form-label" for="credit-card">Número de Tarjeta de Crédito</label>
+        <input required class="form-input" id="name" type="text" placeholder="Alex Montoya" aria-label="Input de nombre completo">
+        <label class="form-label" for="credit-card" id="label-cta">Número de Tarjeta de Crédito</label>
         <div class="form-inputIcon">
-          <input class="form-input is-disabled" id="credit-card" type="number" placeholder="1234 1234 1234 1234" aria-label="Input de Número de tarjeta de crédito">
+          <input required class="form-input is-disabled" id="credit-card" type="number" placeholder="1234 1234 1234 1234" aria-label="Input de Número de tarjeta de crédito" disabled>
           <i class="form-icon icon-creditCard"></i>
         </div>
         <div class="form-creditData">
           <div class="creditData-date">
             <label class="form-label" for="fecha">Fecha vencimiento</label>
             <div class="form-inputIcon">
-              <input class="form-input is-disabled" id="fecha" type="number" placeholder="MM/YY" aria-label="Input de Fecha de vencimiento">
+              <input required class="form-input is-disabled" id="fecha" type="number" placeholder="MM/YY" aria-label="Input de Fecha de vencimiento" disabled>
             </div>
           </div>
           <div class="creditData-code">
             <label class="form-label" for="cvv">CVV</label>
             <div class="form-inputIcon">
-              <input class="form-input is-disabled" id="cvv" type="number" placeholder="..." aria-label="Input de Código CVV">
+              <input required class="form-input is-disabled" id="cvv" type="number" placeholder="..." aria-label="Input de Código CVV" disabled>
               <i class="form-icon icon-info"></i>
             </div>
           </div>
         </div>
         <label class="form-label" for="address">Dirección</label>
-        <input class="form-input is-disabled" id="address" type="text" placeholder="Av. morelos &#35;123" aria-label="Input de Dirección Física">
-        <button class="form-cta is-disabled">Confirmar pago</button>
+        <input required class="form-input is-disabled" id="address" type="text" placeholder="Av. morelos &#35;123" aria-label="Input de Dirección Física" disabled>
+        <button class="form-cta is-disabled" id="form-cta" disabled>Confirmar pago</button>
       </form>
       <p class="form-verify">Verifica que esta información es correcta</p>
     </section>
   </div>
+  <script src="./js/index.js" type="application/javascript"></script>
 </body>
 </html>
